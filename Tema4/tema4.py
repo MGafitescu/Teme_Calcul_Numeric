@@ -11,7 +11,6 @@ def get_matrix(filename, vector):
     lines = content.split("\n")
     del lines[1]
     size = int(lines[0])
-    # matrix = dict.fromkeys(list(range(0,size)),{})
     matrix = {}
     for i in range(0, size):
         matrix[i] = {}
