@@ -65,6 +65,7 @@ def solve_system(matrix, size, vector, omega):
             delta += (xc[i] - xp) ** 2
         k = k + 1
         delta = math.sqrt(delta)
+    print(k)
     if delta > epsilon:
         print("Divergenta")
         return None
@@ -81,10 +82,10 @@ def mult_matrix_vector(A, x):
 
 
 def calculate_norm(v1, v2, size):
-    norma = 0
+    vect = []
     for i in range(size):
-        norma += (v1[i] - v2[i]) ** 2
-    return math.sqrt(norma)
+        vect.append(math.fabs(v1[i] - v2[i]))
+    return max(vect)
 
 
 def calculate_for_omega(matrix, vector, size, omega):
