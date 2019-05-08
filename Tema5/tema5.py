@@ -156,10 +156,11 @@ filenames = ["matrix.txt", "m_rar_sim_2019_500.txt", "m_rar_sim_2019_1000.txt",
 
 def execute(filenames):
     for f in filenames:
+        print("Matricea: {}".format(f))
         matrix, size = get_matrix(f, False)
-        print(verify_simmetry(matrix))
+        print("Este simetrica: {}".format(verify_simmetry(matrix)))
         lambd, vect = metoda_puterii(matrix, size)
-        print(lambd, vect)
+        print("Valoarea proprie maxima:{}\nVectorul propriu asociat:{}\n".format(lambd, vect))
 
 
 def librarie(filename):
@@ -194,5 +195,5 @@ def librarie(filename):
 
 
 generate_matrix(600)
-# execute(filenames)
+execute(filenames)
 librarie("m_rar_sim_2019_500.txt")
