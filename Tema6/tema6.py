@@ -19,7 +19,7 @@ def halley(coefficients):
     r = (coefficients[0]+max_coef)/coefficients[0]
     r = int(r)+1
     k= 1
-    kmax = 100000
+    kmax = 1000
     x = random.randrange(-r,r)
     delta = 12
     while epsilon<=math.fabs(delta)<=10**8 and k<=kmax:
