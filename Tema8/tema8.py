@@ -25,7 +25,7 @@ def steffensen(f):
 
 def g(f, x):
     g1 = (3 * f(x) - 4 * f(x - h) + f(x - 2 * h)) / (2 * h)
-    g2 = (-f(x + 2 * h) + 8 * f(x + h) - 8 * f(x - h) + f(x - 2 * h)) / (12 * h)
+    # g2 = (-f(x + 2 * h) + 8 * f(x + h) - 8 * f(x - h) + f(x - 2 * h)) / (12 * h)
     return g1
 
 
